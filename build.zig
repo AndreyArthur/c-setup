@@ -71,7 +71,7 @@ pub fn build(b: *std.Build) !void {
     );
     var test_sources = std.ArrayList([]const u8).init(b.allocator);
     for (test_dir_files.items) |test_dir_file| {
-        if (std.mem.containsAtLeast(u8, test_dir_file, 1, "deps/")) {
+        if (std.mem.containsAtLeast(u8, test_dir_file, 1, "deps")) {
             try test_lib.append(test_dir_file);
             continue;
         }
