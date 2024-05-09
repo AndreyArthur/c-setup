@@ -9,7 +9,7 @@ bool test_module_add() {
 }
 
 int main() {
-    Runner* runner = runner_init("rules");
+    Runner* runner = runner_init("module");
     runner->test("1 + 2 should be 3", test_module_add);
     runner_free(runner);
     return 0;
