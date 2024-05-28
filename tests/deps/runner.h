@@ -7,8 +7,6 @@ typedef struct Runner {
     void (*test)(char* message, bool (*callback)());
 } Runner;
 
-Runner* runner_init(char* spec);
-
-void runner_free(Runner* runner);
+Runner runner_init(char* spec);
 
 #endif
